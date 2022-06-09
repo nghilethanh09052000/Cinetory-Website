@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import customTransition from "../../styles/customTransition";
 const Service = () => {
     const variants = {
         hidden: { opacity: 0 },
@@ -7,7 +8,8 @@ const Service = () => {
     return (
             <motion.div initial="hidden"
             animate="visible"
-            variants={variants} style={{color:'#fff'}}>
+            variants={customTransition.variant} 
+            style={{color:'#fff'}}>
                 asdasdasdasdasdasdasdasd
             </motion.div>
          );

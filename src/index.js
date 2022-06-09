@@ -6,7 +6,7 @@ import i18n from 'i18next'
 import { initReactI18next } from "react-i18next";
 import VN from './Translations/VN.json'
 import EN from './Translations/EN.json'
-import {getVideoApi} from './api/api'
+import Api from './Api/Api'
 
 
 i18n
@@ -31,11 +31,11 @@ i18n
 
   })
   .then(()=>{
-    return getVideoApi()
+    return Api.getVideoApi()
      
   })
   .then(category=>{
-  
+    console.log('Nghị',category)
     const loader = document.querySelector('.section')
 
     if(category){
@@ -55,7 +55,7 @@ i18n
       failed.style.transform='translate(-50%,50%)'
       failed.style.color='#fff'
       failed.style.textAlign='center'
-      failed.innerHTML='This website is fetching api, please try again'
+      failed.innerHTML='Failed to load content please try again'
       document.body.appendChild(failed);
     }
   })

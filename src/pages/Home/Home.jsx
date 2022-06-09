@@ -1,7 +1,7 @@
 import Utils from '../../Utils'
 import { motion } from "framer-motion"
-
-
+import customTransition from '../../styles/customTransition'
+import customStyles from '../../styles/customStyles'
 const Home = () => {
     const variants = {
         hidden: { opacity: 0 },
@@ -10,20 +10,14 @@ const Home = () => {
     return (
             <motion.div initial="hidden"
             animate="visible"
-            variants={variants}>
+            variants={customTransition.variant} 
+            >
                 <img 
                     src={`${Utils.getImageUrl('editor.jpg')}`}
                     alt="" 
-                    style={{
-                        zIndex: 1,
-                        objectFit: 'cover',
-                        position: 'absolute',
-                        top: '0',
-                        left: '0',
-                        width: '100%',
-                        height: '100%',
-                        opacity: 1
-                    }}
+                    style={
+                       customStyles().backgroundMenu
+                    }
                 />
             </motion.div>
     );

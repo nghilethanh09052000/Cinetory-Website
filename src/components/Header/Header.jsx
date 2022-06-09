@@ -120,7 +120,6 @@ const Header = () => {
           <Typography
             variant="h5"
             noWrap
-            href=""
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
@@ -146,18 +145,20 @@ const Header = () => {
             }}
           >
             {pages.map((page) => (
+                <Link  to={page.link}
+                key={page.link}
+                style={{ textDecoration: "none", color: "#fff" }}     >
               <Button
-                key={page.name}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                <Link
-                  to={page.link}
-                  style={{ textDecoration: "none", color: "#fff" }}
-                >
+              
+                
+           
                   {page.name}
-                </Link>
+                
               </Button>
+              </Link>
             ))}
           </Box>
 
@@ -185,6 +186,7 @@ const Header = () => {
                     >
                       <div style={{ position: "relative", width: "60px" }}>
                         <LazyLoadImage
+                          //delayTime={1000}
                           src="http://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg"
                           alt=""
                           style={{

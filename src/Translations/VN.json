@@ -1,4 +1,7 @@
 {
+    "Common": {
+        "Language_VN": "Vietnamese"
+    },
     "Header": {
         "Language_VN": "Vietnamese",
         "ID": "VN",
@@ -8,7 +11,18 @@
         "Change_Language_1": "Tiếng Anh",
         "Change_Language_2": "Tiếng Việt"
     },
-    "Common": {
-        "Language_VN": "Vietnamese"
+    "Contact": {
+        "Contact": "Liên hệ",
+        "Phone": "Điện thoại",
+        "Phone_Name": 582956685,
+        "Email": "Email",
+        "Email_Name": "itsbewle@gmail.com",
+        "Facebook": "Facebook",
+        "Facebook_Name": "https://bom.so/hl1W6O",
+        "Instagram": "Instagram",
+        "Instagram_Name": "Junn.quan_",
+        "CustomerEmail": "Email",
+        "FullName": "Họ và tên",
+        "Message": "Lời nhắn…"
     }
 }
