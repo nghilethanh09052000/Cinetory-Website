@@ -36,10 +36,10 @@ i18n
   })
   .then(category=>{
   
-    const loader = document.querySelector('section')
+    const loader = document.querySelector('.section')
+
     if(category){
       document.body.removeChild(loader)
-      // document.body.style.backgroundColor='#fff'
       window.categoryData = category
       const root = ReactDOM.createRoot(document.getElementById('root'));
       root.render(

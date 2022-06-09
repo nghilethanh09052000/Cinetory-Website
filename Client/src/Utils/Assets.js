@@ -7,7 +7,6 @@ export const getUrl = (path) =>{
      
         path = path.slice(PUBLIC_URL.length+1)
     }
-  
     let finalPath = path.startsWith('/') 
         ? `${PUBLIC_URL}${path}`
         : `${PUBLIC_URL}${path}`
@@ -16,5 +15,10 @@ export const getUrl = (path) =>{
 
 export const getImageUrl = (asset) =>
 {
-    return getUrl('images/' + asset)
+    return getUrl('/images/Quan/'+ asset)
+}
+
+export const getImageCategoryUrl = (asset) =>
+{
+    return getUrl('/images/Category/'+ asset)
 }

@@ -30,7 +30,7 @@
       body{
         background-color:#000 ;
       }
-      section{
+      .section{
 
         display: flex;
         justify-content: center;
@@ -47,13 +47,13 @@
           filter:hue-rotate(360deg)
         }
       }
-      section .loader{
+      .section .loader{
         position: relative;
         width: 120px;
         height: 120px;
 
       }
-      section .loader span{
+      .section .loader span{
         position: absolute;
         top: 0;
         left: 0;
@@ -61,7 +61,7 @@
         height: 100%;
         transform: rotate(calc(18deg* var(--i)));
       }
-      section .loader span::before{
+      .section .loader span::before{
         content: '';
         position:absolute;
         top: 0;
@@ -91,7 +91,7 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <section >
+    <section class="section">
       <div class="loader">
         <span style="--i:1;"></span>
         <span style="--i:2;"></span>
