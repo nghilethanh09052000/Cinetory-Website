@@ -23,6 +23,11 @@
         "Instagram_Name": "Junn.quan_",
         "CustomerEmail": "Email",
         "FullName": "Họ và tên",
-        "Message": "Lời nhắn…"
+        "Message": "Lời nhắn…",
+        "Send": "Gửi"
+    },
+    "Error": {
+        "ErrorName": "Vui lòng nhập đúng định dạng tên",
+        "ErrorEmail": "Vui lòng nhập đúng định dạng Email"
     }
 }

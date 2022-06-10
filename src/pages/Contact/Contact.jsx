@@ -23,7 +23,7 @@ import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
 import EmailIcon from '@mui/icons-material/Email';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 
 import ContactItem from "./Component/ContactItem";
@@ -59,7 +59,10 @@ const Contact = () => {
             animate="visible"
             variants={customTransition.variant} 
         >
-              <img 
+              <LazyLoadImage 
+              effect="blur"
+              placeholderSrc={`${Utils.getImageUrl('Contact.jpg')}`}	
+              opacity={1}
                     src={`${Utils.getImageUrl('Contact.jpg')}`}
                     alt="" 
                     style={

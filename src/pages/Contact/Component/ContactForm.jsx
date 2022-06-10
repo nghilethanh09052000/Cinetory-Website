@@ -1,6 +1,7 @@
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import Utils from '../../../Utils';
-
+import Api from '../../../Api/Api';
+import EmailIcon from '@mui/icons-material/Email';
 import { Box,
         Grid,
         Typography,
@@ -15,11 +16,12 @@ import { Box,
         InputAdornment,
         TextField,
         Button,
-
+        Divider
 } 
 from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { useState } from 'react';
+import SendIcon from '@mui/icons-material/Send';
 const ContactForm = () => {
     const { t } = useTranslation()
 
@@ -42,19 +44,32 @@ const ContactForm = () => {
                 break;
             case 'message': 
                 setMessage(e.target.value)
-                check = Utils.checkValue(type,e.target.value)
-                setError(check)
                 break;
             default: 
                 return ''
         }
     }
-
+    const handleSubmit = (e) =>{
+        e.preventDefault()
+        let data
+        if(error.error===true) setError(...error,error.value===true)
+        if(name.length <=0 || email.length<=0)
+        {
+            setError(...error,error.value===true)
+        } else{
+            data={
+                name:name,
+                email:email,
+                message:message
+            }
+            let send = Api.sendEmail(data)
+        }
+    }
     return (
         <Box style={{marginTop:'20px'}}>
             <Grid 
                 container 
-                rowSpacing={2} 
+                rowSpacing={4} 
                 columnSpacing={{md:6,xs:2}} 
             >
                 <Grid item md={6} xs={12}>
@@ -77,6 +92,14 @@ const ContactForm = () => {
                         }
                         />
                     </FormControl>
+                    {error.type==='name' && error.error === true
+                    &&
+                        <Typography color='error' variant='body2'>
+                            {t('Error.ErrorName')}
+                        </Typography>
+                    }
+                  
+
                 </Grid>
                 <Grid item md={6} xs={12}>
                     <FormControl 
@@ -98,19 +121,25 @@ const ContactForm = () => {
                         onChange={(e,name)=>handleValueChange(e,'email')}
                         startAdornment={
                             <InputAdornment position="start">
-                                <AccountCircle />
+                                <EmailIcon/>
                             </InputAdornment>
                         }
                         />
                     </FormControl>
+                    {error.type==='email' && error.error === true
+                    &&
+                        <Typography color='error' variant='body2'>
+                            {t('Error.ErrorEmail')}
+                        </Typography>
+                    }
                 </Grid>
-                <Grid item md={12}>
+                <Grid item md={12} xs={12}>
                     <TextField
                         label={t("Contact.Message")}
                         multiline
+                        variant="outlined"
                         rows={3}
                         fullWidth
-                        variant="standard"
                         disabled={
                             email.length <=0 || (error.type==='name') || (error.type==='email' && error.error===true)
                             ? true
@@ -119,11 +148,20 @@ const ContactForm = () => {
                         onChange={(e,name)=>handleValueChange(e,'message')}
                     />
                 </Grid>
-                <Grid item md={12}>
+                <Grid item md={12} xs={12}>
                     <Button
                        variant="contained"
+                       endIcon={<SendIcon/>}
+                       onClick={(e)=>handleSubmit(e)}
+                       disabled={
+                           (name.length <=0 
+                        || email.length<=0 
+                        || error.error===true)
+                        ? true
+                        : false
+                     }
                     >
-                        ClicK
+                        {t("Contact.Send")}
                     </Button>
                 </Grid>
             </Grid>

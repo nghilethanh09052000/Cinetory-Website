@@ -35,7 +35,6 @@ i18n
      
   })
   .then(category=>{
-    console.log('Nghị',category)
     const loader = document.querySelector('.section')
 
     if(category){

@@ -4,8 +4,10 @@ class Api
 {
     constructor()
     {
-
+        this.extentURL=''
+        this.baseURL = `${process.env.REACT_APP_API_URL}/api`
     }
+
     getVideoApi = async (method) =>{
         try{
             const api = await axios.get('https://whispering-castle-50277.herokuapp.com/')
@@ -15,7 +17,14 @@ class Api
         }
        
     }
-    sendEmail = async () =>{
+    sendEmail = (data) =>{
+        try{
+            const api = axios.post('https://whispering-castle-50277.herokuapp.com/',data)
+            console.log('Nghị',api)
+        }catch{
+
+        }
+       
     }
 }
 export default new Api()

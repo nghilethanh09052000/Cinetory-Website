@@ -2,6 +2,7 @@ import Utils from '../../Utils'
 import { motion } from "framer-motion"
 import customTransition from '../../styles/customTransition'
 import customStyles from '../../styles/customStyles'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 const Home = () => {
     const variants = {
         hidden: { opacity: 0 },
@@ -12,7 +13,10 @@ const Home = () => {
             animate="visible"
             variants={customTransition.variant} 
             >
-                <img 
+                <LazyLoadImage
+                     effect="blur"
+                     placeholderSrc={`${Utils.getImageUrl('Contact.jpg')}`}
+                     opacity={1}
                     src={`${Utils.getImageUrl('editor.jpg')}`}
                     alt="" 
                     style={

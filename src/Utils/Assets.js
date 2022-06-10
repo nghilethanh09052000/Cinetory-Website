@@ -1,4 +1,4 @@
-import axios from 'axios'
+
 
 export const getUrl = (path) =>{
     let PUBLIC_URL = `${process.env.PUBLIC_URL}`

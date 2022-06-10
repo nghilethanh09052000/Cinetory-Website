@@ -23,6 +23,11 @@
         "Instagram_Name": "Junn.quan_",
         "CustomerEmail": "Email",
         "FullName": "Full Name",
-        "Message": "Message…"
+        "Message": "Message…",
+        "Send": "Send"
+    },
+    "Error": {
+        "ErrorName": "Please specify a valid name",
+        "ErrorEmail": "Please specify a valid email "
     }
 }

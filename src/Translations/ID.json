@@ -23,6 +23,11 @@
         "Instagram_Name": "Contact:Instagram_Name",
         "CustomerEmail": "Contact:CustomerEmail",
         "FullName": "Contact:FullName",
-        "Message": "Contact:Message"
+        "Message": "Contact:Message",
+        "Send": "Contact:Send"
+    },
+    "Error": {
+        "ErrorName": "Error:ErrorName",
+        "ErrorEmail": "Error:ErrorEmail"
     }
 }
