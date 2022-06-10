@@ -1,0 +1,33 @@
+{
+    "Common": {
+        "Language_VN": "English"
+    },
+    "Header": {
+        "Language_VN": "English",
+        "ID": "EN",
+        "Header_1": "Our Services",
+        "Header_2": "About Us",
+        "Header_3": "Contact Me",
+        "Change_Language_1": "English",
+        "Change_Language_2": "Vietnamese"
+    },
+    "Contact": {
+        "Contact": "Contact Me",
+        "Phone": "Phone",
+        "Phone_Name": 582956685,
+        "Email": "Email",
+        "Email_Name": "itsbewle@gmail.com",
+        "Facebook": "Facebook",
+        "Facebook_Name": "https://bom.so/hl1W6O",
+        "Instagram": "Instagram",
+        "Instagram_Name": "Junn.quan_",
+        "CustomerEmail": "Email",
+        "FullName": "Full Name",
+        "Message": "Message…",
+        "Send": "Send"
+    },
+    "Error": {
+        "ErrorName": "Please specify a valid name",
+        "ErrorEmail": "Please specify a valid email "
+    }
+}
