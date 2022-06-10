@@ -29,5 +29,8 @@
     "Error": {
         "ErrorName": "Vui lòng nhập đúng định dạng tên",
         "ErrorEmail": "Vui lòng nhập đúng định dạng Email"
+    },
+    "Home": {
+        "View": "Demo"
     }
 }

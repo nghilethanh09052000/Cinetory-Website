@@ -22,3 +22,14 @@ export const getImageCategoryUrl = (asset) =>
 {
     return getUrl('/images/Category/'+ asset)
 }
+
+export const getViewDemoUrl = (categories,name) =>{
+    let demo = categories.filter(category=>{
+        return category.name===name
+    })
+    let src = demo[0].category[0].iframe
+    return src
+            .split(" ")[1]
+            .split('src=')[1]
+            .replace(/"/g,'')
+}

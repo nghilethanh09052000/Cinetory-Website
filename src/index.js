@@ -6,7 +6,7 @@ import i18n from 'i18next'
 import { initReactI18next } from "react-i18next";
 import VN from './Translations/VN.json'
 import EN from './Translations/EN.json'
-import Api from './Api/Api'
+import Api from './api/api'
 
 
 i18n

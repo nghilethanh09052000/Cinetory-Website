@@ -71,7 +71,7 @@ const Header = () => {
             }}
           >
             <Link style={customStyles().textLink} to="/">
-              Juun
+              Junn
             </Link>
           </Typography>
 
@@ -132,7 +132,7 @@ const Header = () => {
             }}
           >
             <Link style={customStyles().textLink} to="/">
-              Juun
+            Junn
             </Link>
           </Typography>
           {/* Window */}

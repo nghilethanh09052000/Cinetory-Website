@@ -29,5 +29,8 @@
     "Error": {
         "ErrorName": "Error:ErrorName",
         "ErrorEmail": "Error:ErrorEmail"
+    },
+    "Home": {
+        "View": "Home:View"
     }
 }

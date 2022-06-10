@@ -1,6 +1,6 @@
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import Utils from '../../../Utils';
-import Api from '../../../Api/Api';
+import Api from '../../../api/api';
 import EmailIcon from '@mui/icons-material/Email';
 import { Box,
         Grid,

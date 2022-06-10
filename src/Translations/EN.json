@@ -29,5 +29,8 @@
     "Error": {
         "ErrorName": "Please specify a valid name",
         "ErrorEmail": "Please specify a valid email "
+    },
+    "Home": {
+        "View": "View Demo"
     }
 }

@@ -12,17 +12,20 @@ const ContactItem = ({contact }) => {
     const { icon,content, info }=contact
   
     return (
-        <Grid item md={3} xs={6}>
+        <Grid item md={3} xs={12}>
             <Avatar
-                sx={{ width: 60, height: 60,bgcolor:"#fff" }}
+                sx={{ width: 30, height: 30,bgcolor:"#fff" }}
             >
                 {icon}
             </Avatar>
-            <div style={{marginTop:'5px'}}>
-                <Typography variant="h5">
+            <div>
+                <Typography 
+                    variant="body1"
+                >
                     {content}
                 </Typography>
                 <Typography 
+                       variant="caption"
                 >
                     {info}
                 </Typography>
