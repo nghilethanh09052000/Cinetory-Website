@@ -10,7 +10,7 @@ class Api
 
     getVideoApi = async (method) =>{
         try{
-            const api = await axios.get('https://whispering-castle-50277.herokuapp.com/')
+            const api = await axios.get('https://whispering-castle-50277.herokuapp.com/api')
             if(api.status===200 && api.statusText==='OK') return api.data
         }catch(err){
             console.log(err)
@@ -19,7 +19,7 @@ class Api
     }
     sendEmail = (data) =>{
         try{
-            const api = axios.post('https://whispering-castle-50277.herokuapp.com/',data)
+            const api = axios.post('https://whispering-castle-50277.herokuapp.com/sendmail',data)
             console.log('Nghị',api)
         }catch{
 
