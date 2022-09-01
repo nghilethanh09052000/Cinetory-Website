@@ -26,11 +26,15 @@ const customStyles = image => ({
         justifyContent:'center',
         alignItems:'center'
     },
+    divJustifyContent:{
+        display: 'flex',
+        justifyContent:'center',
+    },
     divCenterHome:{
         position:'absolute',
-        top: '20%',
+        top: '30%',
         left: '50%',
-        transform:'translate(-50%,-20%)',
+        transform:'translate(-50%,-10%)',
     },
     divIframe:{
         position:'absolute',
@@ -59,9 +63,9 @@ const customStyles = image => ({
         transform:'translate(-50%,-50%)',
     },
     iconColor:{
-        color:'#000',
-        width: 30, 
-        height: 30
+        color:'#fff',
+        width: 60, 
+        height: 60
         //backgroundColor:'#000'
     },
     divColumn: {

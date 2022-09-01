@@ -5,7 +5,7 @@
     "Header": {
         "Language_VN": "English",
         "ID": "EN",
-        "Header_1": "Our Services",
+        "Header_1": "My Services",
         "Header_2": "About Us",
         "Header_3": "Contact Me",
         "Change_Language_1": "English",
@@ -18,13 +18,17 @@
         "Email": "Email",
         "Email_Name": "itsbewle@gmail.com",
         "Facebook": "Facebook",
-        "Facebook_Name": "https://bom.so/hl1W6O",
+        "Facebook_Name": "https://www.facebook.com/junn.quannn",
         "Instagram": "Instagram",
         "Instagram_Name": "Junn.quan_",
         "CustomerEmail": "Email",
         "FullName": "Full Name",
         "Message": "Message…",
-        "Send": "Send"
+        "Send": "Send",
+        "QUAN_NAME": "QUAN JUNN",
+        "QUAN_P1": "I has various experience working as lead editor for influencers such as Tizi Dich Lep, Saigon Teu, etc.",
+        "QUAN_P2": "I has real passion in VFX which he quits his current course in Marketing to become an expert in VFX. Such an amazing talented young man.",
+        "QUAN_ROLE": "Lead Post-Production Editor"
     },
     "Error": {
         "ErrorName": "Please specify a valid name",

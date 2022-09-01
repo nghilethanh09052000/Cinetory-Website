@@ -18,13 +18,17 @@
         "Email": "Email",
         "Email_Name": "itsbewle@gmail.com",
         "Facebook": "Facebook",
-        "Facebook_Name": "https://bom.so/hl1W6O",
+        "Facebook_Name": "https://www.facebook.com/junn.quannn",
         "Instagram": "Instagram",
         "Instagram_Name": "Junn.quan_",
         "CustomerEmail": "Email",
         "FullName": "Họ và tên",
         "Message": "Lời nhắn…",
-        "Send": "Gửi"
+        "Send": "Gửi",
+        "QUAN_NAME": "QUAN JUNN",
+        "QUAN_P1": "Là người có nhiều kinh nghiệm sản xuất cho các Influencers như Tizi Dich Lep, Saigon Teu…",
+        "QUAN_P2": "Đã làm việc trong nhiều lĩnh vực và có các project khác nhau",
+        "QUAN_ROLE": "Lead Post-Production Editor"
     },
     "Error": {
         "ErrorName": "Vui lòng nhập đúng định dạng tên",

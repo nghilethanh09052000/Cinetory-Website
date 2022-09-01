@@ -20,18 +20,12 @@ function App() {
     open:false,
     media:''
   });
-  
 
-  const handleScrollTotop = () => {
-    window.scrollTo(0, 0);
-  };
   useEffect(() => {
     const handleScroll = () => setScrollTop(window.scrollY >= 200);
     window.addEventListener("scroll", handleScroll);
     // Cleanup function:
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
 
@@ -44,6 +38,13 @@ function App() {
       }
     })
   }
+
+  const handleScrollTotop = () => {
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    });
+  };
 
 
   return (
@@ -65,7 +66,7 @@ function App() {
           handleBackDropVideo={handleBackDropVideo}
         />
       </Video>
-      {/* <Contact/> */}
+      <Contact/>
       {scrollTop && <ScrollToTop handleScrollTotop={handleScrollTotop} />}
     </div>
   );

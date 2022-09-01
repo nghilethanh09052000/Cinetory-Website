@@ -24,10 +24,10 @@ const Banner = () => {
             layers={[
               {
                 image: Utils.getImageUrl("Contact.jpg"),
-                speed: -30,
+                speed: -50,
               },
             ]}
-            className="aspect-[3/1]"
+            className="aspect-[2/1]"
             style={{ aspectRatio: "2 / 1" }}
           />
         </ParallaxProvider>

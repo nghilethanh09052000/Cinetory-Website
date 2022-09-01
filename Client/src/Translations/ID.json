@@ -24,7 +24,11 @@
         "CustomerEmail": "Contact:CustomerEmail",
         "FullName": "Contact:FullName",
         "Message": "Contact:Message",
-        "Send": "Contact:Send"
+        "Send": "Contact:Send",
+        "QUAN_NAME": "Contact:QUAN_NAME",
+        "QUAN_P1": "Contact:QUAN_P1",
+        "QUAN_P2": "Contact:QUAN_P2",
+        "QUAN_ROLE": "Contact:QUAN_ROLE"
     },
     "Error": {
         "ErrorName": "Error:ErrorName",

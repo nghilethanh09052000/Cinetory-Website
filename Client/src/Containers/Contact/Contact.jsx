@@ -1,42 +1,46 @@
-import { motion } from "framer-motion";
-import customTransition from "../../Styles/customTransition";
-import customStyles from "../../Styles/customStyles";
-import Utils from "../../Utils";
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+import Link from "@mui/material/Link";
 import {
-  Box,
-  Grid,
-  Typography,
-  Paper,
-  Card,
-  CardMedia,
-  CardContent,
   Avatar,
-  FormControl,
-  InputLabel,
-  Input,
-  InputAdornment,
+  Grid,
+  Paper,
+  List,
+  ListItem,
+  ListItemText,
 } from "@mui/material";
-import { useState } from "react";
+import Utils from "../../Utils";
+import customStyles from "../../Styles/customStyles";
 import { useTranslation } from "react-i18next";
-import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";
 import EmailIcon from "@mui/icons-material/Email";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import _ from "lodash";
 
-import ContactItem from "./Component/ContactItem";
-import ContactForm from "./Component/ContactForm";
+function Copyright() {
+  return (
+    <Typography variant="body2" color="text.secondary">
+      {"Copyright © "}
+      <Link
+        color="inherit"
+        href="https://github.com/thanhnghi95"
+        target={"blank"}
+      >
+        Design by: Thanh Nghi
+      </Link>{" "}
+      {new Date().getFullYear()}
+      {"."}
+    </Typography>
+  );
+}
 
-const Contact = () => {
+export default function Contact({ props }) {
   const { t } = useTranslation();
   const contacts = [
     {
-      icon: <PhoneInTalkIcon sx={{ ...customStyles().iconColor }} />,
-      content: t("Contact.Phone"),
-      info: `+` + t("Contact.Phone_Name"),
-    },
-    {
-      icon: <EmailIcon sx={{ ...customStyles().iconColor }} />,
+      icon: <EmailIcon sx={{ ...customStyles().iconColor }} fontSize="large" />,
       content: t("Contact.Email"),
       info: t("Contact.Email_Name"),
     },
@@ -52,61 +56,104 @@ const Contact = () => {
     },
   ];
   return (
-    <motion.div
-      initial="hidden"
-      animate="visible"
-      variants={customTransition.variant}
-    >
-      <div
-        style={{
-          ...customStyles().divCenter,
-          zIndex: "1000",
+    <div id="contact">
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
         }}
       >
-        <Box>
-          <Box>
-            <Typography
-              variant="h5"
-              noWrap
-              sx={{
-                flexGrow: 1,
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "#fff",
-                textDecoration: "none",
-              }}
-            >
-              {t("Contact.Contact")}
-            </Typography>
-          </Box>
-          <Card 
-            sx={{ 
-              bgcolor: "#fff" ,
-              display:{
-                md:'flex',
-                xs:'block'
-              } 
-            }}
-          >
-              <ContactForm />
-              <Grid 
-                container 
-                rowSpacing={2} 
-                //columnSpacing={{ md: 6, xs: 2 }}
+        <Container component="main" maxWidth="xl">
+          <Grid container spacing={1}>
+            <Grid item sm={12} md={3} >
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
               >
-                {contacts.map((contact, index) => (
-                  <ContactItem 
-                    key={index} 
-                    contact={contact} 
+                <Paper
+                  sx={{
+                    height: 250,
+                    width: 250,
+                    background: "#000",
+                  }}
+                  variant="square"
+                >
+                  <Avatar
+                    alt="Quan"
+                    src={Utils.getImageUrl("Quan.jpg")}
+                    sx={{ width: 250, height: 250 }}
                   />
-                ))}
-              </Grid>
-            </Card>
-        </Box>
-      </div>
-    </motion.div>
-  );
-};
+                </Paper>
+              </Box>
+            </Grid>
 
-export default Contact;
+            <Grid item sm={12} md={5} >
+              <Grid item  sm={12} md={10} sx={{color:"#fff"}}>
+                <Typography variant="h4" align="center">
+                  {t("Contact.QUAN_NAME")}
+                </Typography>
+                <Typography variant="h6" align="center" gutterBottom>
+                  {t("Contact.QUAN_ROLE")}
+                </Typography>
+                <Grid item md={8} sx={{mr:'auto',ml:'auto'}}>
+                  <Typography variant="body1" align="justify" gutterBottom>
+                    {t("Contact.QUAN_P1")}
+                  </Typography>
+                  <Typography variant="body1" align="justify" gutterBottom>
+                    {t("Contact.QUAN_P2")}
+                  </Typography>
+                </Grid>
+                </Grid>
+            </Grid>
+
+            <Grid item sm={12} md={4}> 
+              <div >
+                <List sx={{ color: "#fff" }}>
+                  {_.map(contacts, ({ icon, content, info }, index) => {
+                    return (
+                      <ListItem
+                        key={index}
+                        sx={{
+                          ...customStyles().divJustifyContent,
+                        }}
+                      >
+                        {icon}
+                        <ListItemText
+                          primary={content}
+                          secondary={
+                            <Typography style={{ ...customStyles().textLink }}>
+                              {info}
+                            </Typography>
+                          }
+                        />
+                      </ListItem>
+                    );
+                  })}
+                </List>
+              </div>
+            </Grid>
+          </Grid>
+          
+        </Container>
+
+        <Box
+          component="footer"
+          sx={{
+            py: 3,
+            px: 2,
+            mt: "auto",
+            background: "#fff",
+          }}
+        >
+          <Container maxWidth="sm">
+            <Typography variant="body1"></Typography>
+            <Copyright />
+          </Container>
+        </Box>
+      </Box>
+    </div>
+  );
+}

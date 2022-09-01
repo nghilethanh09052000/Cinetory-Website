@@ -2,7 +2,6 @@ import Utils from "../../Utils";
 import { motion } from "framer-motion";
 import customTransition from "../../Styles/customTransition";
 import customStyles from "../../Styles/customStyles";
-import { useState } from "react";
 import { Button } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import React from "react";
@@ -11,13 +10,13 @@ import {
   ParallaxBanner,
   ParallaxProvider,
 } from "react-scroll-parallax";
-import { useEffect } from "react";
+
 
 const Home = ({
   children,
   children: {
     props: {
-      backDropVideo: { open, media },
+      backDropVideo: {open},
       handleBackDropVideo,
     },
   },
@@ -39,7 +38,7 @@ const Home = ({
               layers={[
                 {
                   image: Utils.getImageUrl("editor.jpg"),
-                  speed: -30,
+                  speed: -50,
                 },
               ]}
               className="aspect-[2/1]"
@@ -72,7 +71,7 @@ const Home = ({
                   "drop-shadow(0 0 20px #00ff0a) contrast(2) brightness(2)",
               },
             }}
-            onClick={() => handleBackDropVideo(true, Utils.getViewDemoUrl())}
+            onClick={handleBackDropVideo.bind(null,true, Utils.getViewDemoUrl())}
           >
             {t("Home.View")}
           </Button>

@@ -4,15 +4,12 @@ const internalStyle = {
     buttonFixed: {
         position:'fixed',
         bottom:'20px',
-        right:'30px',
+        right:'70px',
         zIndex:99,
-        backgroundColor:'#555',
+        background: "grey",
         cursor:'pointer',
         padding:'15px',
         borderRadius:'50%',
-        "&:hover": {
-            background: "#efefef"
-        }
     },
 
 }   
@@ -24,7 +21,7 @@ const ScrollToTop = ({handleScrollTotop}) => {
             style={internalStyle.buttonFixed}
             onClick={handleScrollTotop}
         >
-            <ArrowDropUpIcon/>
+            <ArrowDropUpIcon sx={{color:'#000'}}/>
         </div>
       );
 }
