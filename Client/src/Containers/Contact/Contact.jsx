@@ -25,7 +25,7 @@ function Copyright() {
       {"Copyright © "}
       <Link
         color="inherit"
-        href="https://github.com/thanhnghi95"
+        href="https://github.com/thanhnghi09052000"
         target={"blank"}
       >
         Design by: Thanh Nghi
